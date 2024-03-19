@@ -20,6 +20,11 @@ class personalPlant(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        app_label = 'base'
+
+        
+
 
 # databse for plant library 
 class libraryPlant(models.Model):
@@ -34,6 +39,9 @@ class libraryPlant(models.Model):
     fertilization= models.CharField(max_length=200)
     soil = models.CharField(max_length=200)
     pet = models.BooleanField(default=False)
+
+    class Meta:
+        app_label = 'base'
 
     def __str__(self):
         return self.name
