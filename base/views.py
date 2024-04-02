@@ -4,7 +4,8 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.core import serializers
 from django.http import HttpResponse
-from .models import *
+from . models import *
+from . serializers import UserSignupSerializer
 
 
 class Loginview(APIView):
