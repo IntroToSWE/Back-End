@@ -5,7 +5,6 @@ from rest_framework.response import Response
 from django.core import serializers
 from django.http import HttpResponse
 from .models import *
-from .serializers import *
 
 
 class Loginview(APIView):
