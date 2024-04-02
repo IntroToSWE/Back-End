@@ -2,10 +2,10 @@ import json
 from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from django.core import serializers
+from django.core import serializers as djangoSerializer
 from django.http import HttpResponse
 from . models import *
-from . serializers import UserSignupSerializer
+from . serializers import *
 
 
 class Loginview(APIView):
@@ -46,7 +46,7 @@ class HomeView(APIView):
 class PlantLibraryView(APIView):
     def get(self, request):
         output = libraryPlant.objects.all()
-        jsonOutput = serializers.serialize('json', output)
+        jsonOutput = djangoSerializer.serialize('json', output)
         jsonOutput = json.loads(jsonOutput)
         return Response(jsonOutput)
         # return HTTPResponse(jsonOutput, content_type="text/json-comment-filtered") # might use this instead ???
