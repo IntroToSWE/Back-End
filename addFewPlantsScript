@@ -18,3 +18,76 @@ VALUES ("Pothos", "Pothos", "Medium", "A vining plant with heart-shaped leaves t
 INSERT INTO base_libraryplant (name, scientific_name, size, description, inside, water, sun, fertilization, soil, pet)
 VALUES ("Rubber Plant", "Rubber Plant", "Medium to Large", "A popular indoor plant with large, glossy leaves", True,
 "Regularly", "Bright, indirect light", "Monthly", "Well-draining", False);
+
+-- Inserting Tomato
+INSERT INTO base_libraryplant (name, size, description, inside, water, sun, fertilization, soil, pet)
+VALUES ('Tomato', 'Small to Large', 'A fruit-bearing plant commonly grown in gardens or containers.', 0, 'Regularly', 'Full sun', 'Bi-weekly', 'Well-draining', 0);
+
+-- Inserting Cucumber
+INSERT INTO base_libraryplant (name, size, description, inside, water, sun, fertilization, soil, pet)
+VALUES ('Cucumber', 'Medium to Large', 'A vining plant that produces elongated, green fruits used in salads and pickles.', 0, 'Regularly', 'Full sun', 'Weekly', 'Well-draining', 0);
+
+-- Inserting Potato
+INSERT INTO base_libraryplant (name, size, description, inside, water, sun, fertilization, soil, pet)
+VALUES ('Potato', 'Small to Large', 'A starchy tuberous crop widely cultivated for its edible underground tubers.', 0, 'Regularly', 'Full sun', 'Monthly', 'Well-draining', 0);
+
+-- Inserting Orchid
+INSERT INTO base_libraryplant (name, size, description, inside, water, sun, fertilization, soil, pet)
+VALUES ('Orchid', 'Small to Large', 'A diverse and widespread family of flowering plants with colorful and fragrant blooms.', 1, 'Regularly', 'Indirect light', 'Monthly', 'Well-draining', 0);
+
+-- Inserting Spider Plant
+INSERT INTO base_libraryplant (name, size, description, inside, water, sun, fertilization, soil, pet)
+VALUES ('Spider Plant', 'Small to Medium', 'An easy-to-grow houseplant with arching leaves and small white flowers.', 1, 'Regularly', 'Indirect light', 'Monthly', 'Well-draining', 1);
+
+-- Inserting ZZ Plant
+INSERT INTO base_libraryplant (name, size, description, inside, water, sun, fertilization, soil, pet)
+VALUES ('ZZ Plant', 'Small to Medium', 'Zamioculcas zamiifolia, also known as the ZZ plant, is valued for its attractive, glossy green foliage and ability to tolerate low light conditions.', 1, 'Infrequently', 'Low to indirect light', 'Monthly', 'Well-draining', 0);
+
+-- Inserting Philodendron
+INSERT INTO base_libraryplant (name, size, description, inside, water, sun, fertilization, soil, pet)
+VALUES ('Philodendron', 'Small to Large', 'Philodendrons are popular indoor plants known for their lush, green foliage and easy care requirements. Varieties include heartleaf philodendron and Swiss cheese plant (Monstera deliciosa).', 1, 'Regularly', 'Low to medium light', 'Monthly', 'Well-draining', 1);
+
+-- Inserting Boston Fern
+INSERT INTO base_libraryplant (name, size, description, inside, water, sun, fertilization, soil, pet)
+VALUES ('Boston Fern', 'Medium', 'Nephrolepis exaltata, or Boston fern, is a classic indoor plant prized for its feathery fronds and ability to thrive in humid conditions. It adds a touch of lushness to any space.', 1, 'Regularly', 'Indirect light', 'Monthly', 'Well-draining', 1);
+
+-- Inserting Aloe Vera
+INSERT INTO base_libraryplant (name, size, description, inside, water, sun, fertilization, soil, pet)
+VALUES ('Aloe Vera', 'Small to Medium', 'Aloe vera is a succulent plant known for its medicinal properties and attractive, spiky leaves. It prefers bright, indirect light and infrequent watering.', 1, 'Infrequently', 'Bright, indirect light', 'Monthly', 'Well-draining', 1);
+
+-- Inserting Hosta
+INSERT INTO base_libraryplant (name, size, description, inside, water, sun, fertilization, soil, pet)
+VALUES ('Hosta', 'Medium to Large', 'Hostas are perennial plants valued for their attractive foliage, which comes in various shades of green, blue, or variegated patterns. They thrive in shady garden spots.', 0, 'Regularly', 'Partial to full shade', 'Monthly', 'Moist, well-draining', 0);
+
+-- Inserting Gerbera Daisy
+INSERT INTO base_libraryplant (name, size, description, inside, water, sun, fertilization, soil, pet)
+VALUES ('Gerbera Daisy', 'Small to Medium', 'Gerbera daisies are perennial flowering plants with large, colorful blooms. They are popular choices for adding a splash of color to garden beds or containers.', 0, 'Regularly', 'Full sun to partial shade', 'Bi-weekly', 'Well-draining', 0);
+
+-- Inserting Hydrangea
+INSERT INTO base_libraryplant (name, size, description, inside, water, sun, fertilization, soil, pet)
+VALUES ('Hydrangea', 'Medium to Large', 'Hydrangeas are deciduous shrubs prized for their large, showy flower heads that come in various shades of pink, blue, purple, or white. They prefer partial shade and moist, well-draining soil.', 0, 'Regularly', 'Partial shade', 'Monthly', 'Moist, well-draining', 0);
+
+-- Inserting Marigold
+INSERT INTO base_libraryplant (name, size, description, inside, water, sun, fertilization, soil, pet)
+VALUES ('Marigold', 'Small to Medium', 'Marigolds are annual flowering plants known for their bright orange, yellow, or red blooms. They are often used as bedding plants or in vegetable gardens to repel pests.', 0, 'Regularly', 'Full sun', 'Bi-weekly', 'Well-draining', 0);
+
+-- Inserting Petunia
+INSERT INTO base_libraryplant (name, size, description, inside, water, sun, fertilization, soil, pet)
+VALUES ('Petunia', 'Small to Medium', 'Petunias are annual flowering plants available in a wide array of colors. They are popular choices for adding color to garden beds, borders, and containers.', 0, 'Regularly', 'Full sun', 'Weekly', 'Well-draining', 0);
+
+-- Inserting Geranium
+INSERT INTO base_libraryplant (name, size, description, inside, water, sun, fertilization, soil, pet)
+VALUES ('Geranium', 'Small to Medium', 'Geraniums are flowering plants with colorful blooms that come in a variety of shapes and sizes. They are often used in containers, hanging baskets, or garden beds.', 0, 'Regularly', 'Full sun to partial shade', 'Bi-weekly', 'Well-draining', 0);
+
+-- Inserting Lavender
+INSERT INTO base_libraryplant (name, size, description, inside, water, sun, fertilization, soil, pet)
+VALUES ('Lavender', 'Small to Medium', 'Lavender is a fragrant herbaceous plant prized for its aromatic flowers and foliage. It is often used in gardens for its beauty and calming scent.', 0, 'Infrequently', 'Full sun', 'Monthly', 'Well-draining', 0);
+
+-- Inserting Impatiens
+INSERT INTO base_libraryplant (name, size, description, inside, water, sun, fertilization, soil, pet)
+VALUES ('Impatiens', 'Small to Medium', 'Impatiens are shade-loving annual plants with colorful flowers that bloom profusely throughout the summer. They are commonly used in containers or as ground cover in shaded areas.', 0, 'Regularly', 'Partial to full shade', 'Bi-weekly', 'Well-draining', 0);
+
+-- Inserting Daylily
+INSERT INTO base_libraryplant (name, size, description, inside, water, sun, fertilization, soil, pet)
+VALUES ('Daylily', 'Small to Medium', 'Daylilies are hardy perennial plants known for their colorful, trumpet-shaped flowers. They are easy to grow and come in a wide range of colors and sizes.', 0, 'Regularly', 'Full sun to partial shade', 'Monthly', 'Well-draining', 0);
+
