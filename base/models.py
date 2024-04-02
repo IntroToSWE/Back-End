@@ -32,7 +32,7 @@ class libraryPlant(models.Model):
     # id = models.AutoField(primary_key=True)
     # user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True) 
     name = models.CharField(max_length=200)
-    scientific_name = models.CharField(max_length=200)
+    # scientific_name = models.CharField(max_length=200)
     size = models.CharField(max_length=50)
     description = models.TextField(null=True, blank=True)
     inside = models.BooleanField(default=True)
