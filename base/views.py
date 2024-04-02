@@ -5,6 +5,8 @@ from rest_framework.response import Response
 from django.core import serializers
 from django.http import HttpResponse
 from .models import *
+from .serializers import *
+
 
 class Loginview(APIView):
     def get(self, request):
@@ -29,7 +31,10 @@ class SignupView(APIView):
 
     def post(self, request):
         print(request.data)
-        return Response("User Created", status=200)
+        userSignupSerializer = UserSignupSerializer(data=request.data)
+        if userSignupSerializer.is_valid(raise_exception=True):
+            userSignupSerializer.save()
+            return Response("User Created", status=200)
 
 class HomeView(APIView):
     def get(self, request):
