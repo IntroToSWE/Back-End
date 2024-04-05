@@ -53,3 +53,18 @@ class PlantLibraryView(APIView):
     
     def post(self, request):
         return Response()
+
+class CreatePlantView(APIView):
+    def get(self, request):
+        return Response()
+
+    # to create new plant
+    def post(self, request):
+        plant_data = request.data
+        print(plant_data)
+        plant_serializer = PlantSerializer(data=plant_data)
+        if plant_serializer.is_valid(raise_exception=True):
+            plant_serializer.save()
+            return Response("Plant created successfully", status=201)
+
+#class UpdatePlantView(APIView):
