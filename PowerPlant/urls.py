@@ -27,5 +27,6 @@ urlpatterns = [
     path('updateprofile/', UpdateUserProfile.as_view(), name="updateProfile"),
     path('getmyplants/', UserPlants.as_view(), name="userPlants"),
     path('updateplant/', UpdateUserPlants.as_view(), name="updatePlant"),
+    path('createplant/', CreatePlantView.as_view(), name = "createPlant"),
     path('admin/', admin.site.urls)
 ]
