@@ -20,11 +20,12 @@ class personalPlant(models.Model):
     # soil = models.CharField(max_length=200)
     # alive = models.BooleanField(default=False)
 
-    def __str__(self):
-        return self.name
-
-    class Meta:
-        app_label = 'base'
+    def updateAlive(self, alive):
+        if alive:
+            self.alive = False
+        else:
+            self.alive = True
+        self.save()
 
 
 # databse for plant library 
