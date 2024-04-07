@@ -22,6 +22,10 @@ urlpatterns = [
     path('', HomeView.as_view(), name="home"),
     path('login/', Loginview.as_view(), name="login"),
     path('signup/', SignupView.as_view(), name="signup"),
-    path('getplantlibrary', PlantLibraryView.as_view(), name="plantLibrary"),
+    path('getplantlibrary/', PlantLibraryView.as_view(), name="plantLibrary"),
+    path('getuserprofile/', UserProfileView.as_view(), name="userProfile"),
+    path('updateprofile/', UpdateUserProfile.as_view(), name="updateProfile"),
+    path('getmyplants/', UserPlants.as_view(), name="userPlants"),
+    path('updateplant/', UpdateUserPlants.as_view(), name="updatePlant"),
     path('admin/', admin.site.urls)
 ]
