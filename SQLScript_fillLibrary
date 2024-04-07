@@ -1,22 +1,23 @@
 -- SQLite
-INSERT INTO base_libraryplant (name, scientific_name, size, description, inside, water, sun, fertilization, soil, pet)
-VALUES ("Peace Lily", "Peace Lily", "Medium", "A popular indoor plant with glossy, dark green leaves and white flowers", True,
+
+INSERT INTO base_libraryplant (name, size, description, inside, water, sun, fertilization, soil, pet)
+VALUES ("Peace Lily", "Medium", "A popular indoor plant with glossy, dark green leaves and white flowers", True,
 "Regularly", "Low to medium light", "Monthly", "Well-draining", False);
 
-INSERT INTO base_libraryplant (name, scientific_name, size, description, inside, water, sun, fertilization, soil, pet)
-VALUES ("Haworthia", "Haworthia", "Small to Medium", "A small succulent plant with rosette-shaped leaves", True,
+INSERT INTO base_libraryplant (name, size, description, inside, water, sun, fertilization, soil, pet)
+VALUES ("Haworthia", "Small to Medium", "A small succulent plant with rosette-shaped leaves", True,
 "Infrequently", "Bright, indirect light", "Monthly", "Sandy or well-draining", True);
 
-INSERT INTO base_libraryplant (name, scientific_name, size, description, inside, water, sun, fertilization, soil, pet)
-VALUES ("Snake Plant", "Snake Plant", "Medium to Large", "A hardy indoor plant with long, upright leaves", True,
+INSERT INTO base_libraryplant (name, size, description, inside, water, sun, fertilization, soil, pet)
+VALUES ("Snake Plant", "Medium to Large", "A hardy indoor plant with long, upright leaves", True,
 "Infrequently", "Low to bright indirect light", "Monthly", "Well-draining", False);
 
-INSERT INTO base_libraryplant (name, scientific_name, size, description, inside, water, sun, fertilization, soil, pet)
-VALUES ("Pothos", "Pothos", "Medium", "A vining plant with heart-shaped leaves that can be variegated", True,
+INSERT INTO base_libraryplant (name, size, description, inside, water, sun, fertilization, soil, pet)
+VALUES ("Pothos", "Medium", "A vining plant with heart-shaped leaves that can be variegated", True,
 "Regularly", "Low to medium light", "Monthly", "Well-draining", True);
 
-INSERT INTO base_libraryplant (name, scientific_name, size, description, inside, water, sun, fertilization, soil, pet)
-VALUES ("Rubber Plant", "Rubber Plant", "Medium to Large", "A popular indoor plant with large, glossy leaves", True,
+INSERT INTO base_libraryplant (name, size, description, inside, water, sun, fertilization, soil, pet)
+VALUES ("Rubber Plant", "Medium to Large", "A popular indoor plant with large, glossy leaves", True,
 "Regularly", "Bright, indirect light", "Monthly", "Well-draining", False);
 
 -- Inserting Tomato

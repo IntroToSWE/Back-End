@@ -1,0 +1,20 @@
+-- SQLite
+
+-- Run 1st to avoid duplicate values
+-- Run if you want to start over with fresh data
+
+DELETE FROM base_libraryplant;
+DELETE FROM sqlite_sequence WHERE name="base_libraryplant";
+VACUUM;
+
+DELETE FROM base_users;
+DELETE FROM sqlite_sequence WHERE name="base_users";
+VACUUM;
+
+DELETE FROM base_personalplant;
+DELETE FROM sqlite_sequence WHERE name="base_personalplant";
+VACUUM;
+
+-- Add any new tables if needed and just follow the same format
+-- DELETE FROM <Table Name>;
+-- VACCUM;

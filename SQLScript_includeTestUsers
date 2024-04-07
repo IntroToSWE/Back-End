@@ -1,0 +1,31 @@
+-- SQLite
+
+INSERT INTO base_users (first_name, last_name, email, password)
+VALUES("Paul", "Smith", "paul22smith@gmail.com", "awdom3r@23");
+
+INSERT INTO base_users (first_name, last_name, email, password)
+VALUES("Alice", "Johnson", "alice.johnson@gmail.com", "pass1234");
+
+INSERT INTO base_users (first_name, last_name, email, password)
+VALUES("John", "Doe", "john.doe@icloud.com", "qw33ferty@123");
+
+INSERT INTO base_users (first_name, last_name, email, password)
+VALUES("Emily", "Wilson", "emily34.wilson@outlook.com", "securepwd!22");
+
+INSERT INTO base_users (first_name, last_name, email, password)
+VALUES("Michael", "Brown", "michael.brown@gmail.com", "mypassword123");
+
+INSERT INTO base_users (first_name, last_name, email, password)
+VALUES("Sarah", "Clark", "sarah.clark@icloud.com", "strongpass!98");
+
+INSERT INTO base_users (first_name, last_name, email, password)
+VALUES("Jessica", "Taylor", "jessica.taylor@gmail.com", "taylor@1234");
+
+INSERT INTO base_users (first_name, last_name, email, password)
+VALUES("Matthew", "White", "matthew3white@icloud.com", "mypass321!");
+
+INSERT INTO base_users (first_name, last_name, email, password)
+VALUES("Emma", "Young", "emma.young5@outlook.com", "securepwd123!");
+
+INSERT INTO base_users (first_name, last_name, email, password)
+VALUES("Blake", "Shore", "balkeshore1990@icloud.com", "qwehtrdrty@123");
