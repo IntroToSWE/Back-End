@@ -78,7 +78,7 @@ class UserProfileView(APIView):
     def post(self, request):
         jsonData = request.data
         print(jsonData)
-        userID = jsonData["userID"]
+        userID = int(jsonData["userID"])
         output = Users.objects.filter(id=userID)
         jsonOutput = djangoSerializer.serialize('json', output)
         jsonOutput = json.loads(jsonOutput)
@@ -90,29 +90,23 @@ class UpdateUserProfile(APIView):
 
     def post(self, request):
         jsonData = request.data
-        userID = jsonData["userID"]
+        userID = int(jsonData["userID"])
         if "delete" in jsonData:
-            if jsonData["delete"].lower() == "true":
-                userID = jsonData["userID"]
-                Users.objects.get(id=userID).delete()
-                return Response("User Deleted", status=200)
-            else:
-                return Response("Nothing Happened", status=200)
+            userID = jsonData["userID"]
+            Users.objects.get(id=userID).delete()
+            return Response("User Deleted", status=200)
         elif "update" in jsonData:
             user = Users.objects.get(id=userID)
-            if jsonData["update"].lower() == "true":
-                if "first_name" in jsonData:
-                    user.first_name=jsonData["first_name"]
-                if "last_name" in jsonData:
-                    user.last_name=jsonData["last_name"]
-                if "email" in jsonData:
-                    user.email=jsonData["email"]
-                if "password" in jsonData:
-                    user.password=jsonData["password"]
-                user.save()
-                return Response("User Profile Updated", status=200)
-            else:
-                return Response("Nothing Happened", status=200)
+            if "first_name" in jsonData:
+                user.first_name=jsonData["first_name"]
+            if "last_name" in jsonData:
+                user.last_name=jsonData["last_name"]
+            if "email" in jsonData:
+                user.email=jsonData["email"]
+            if "password" in jsonData:
+                user.password=jsonData["password"]
+            user.save()
+            return Response("User Profile Updated", status=200)
         else:
             return Response()
         
