@@ -64,12 +64,19 @@ class CreatePlantView(APIView):
 
     # to create new plant
     def post(self, request):
-        plant_data = request.data
-        print(plant_data)
-        plant_serializer = PlantSerializer(data=plant_data)
-        if plant_serializer.is_valid(raise_exception=True):
-            plant_serializer.save()
-            return Response("Plant created successfully", status=201)
+        # {"user_id":1,"plantID_id":5, "alive":"True"}
+        jsonData = request.data
+        print(jsonData)
+        user_id = jsonData["user_id"]
+        plantID_id = jsonData["plantID_id"]
+        alive = jsonData["alive"]
+        record = personalPlant.objects.create()
+        record.user_id=user_id
+        record.plantID_id = plantID_id
+        record.alive = alive
+        record.save()
+        return Response("worked", status=200)
+
         
 class UserProfileView(APIView):
     def get(self, request):

@@ -9,4 +9,4 @@ class UserSignupSerializer(serializers.ModelSerializer):
 class PlantSerializer(serializers.ModelSerializer):
     class Meta:
         model = personalPlant
-        fields = ["user", "plantID", "alive"]
+        fields = ["alive", "user_id", "plantID_id"]
