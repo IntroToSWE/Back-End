@@ -67,9 +67,9 @@ class CreatePlantView(APIView):
         # {"user_id":1,"plantID_id":5, "alive":"True"}
         jsonData = request.data
         print(jsonData)
-        user_id = jsonData["user_id"]
-        plantID_id = jsonData["plantID_id"]
-        alive = jsonData["alive"]
+        user_id = int(jsonData["user_id"])
+        plantID_id = int(jsonData["plantID_id"])
+        alive = bool(jsonData["alive"])
         record = personalPlant.objects.create()
         record.user_id=user_id
         record.plantID_id = plantID_id
@@ -151,6 +151,7 @@ class UpdateUserPlants(APIView):
 
     def post(self, request):
         jsonData = request.data
+        print(f"\n\n\n{jsonData}\n\n\n")
         userID = jsonData["userID"]
         plantID = jsonData["plantID"]
         alive = jsonData["alive"] # should be an interger (1 = alive, 0 = not alive)
