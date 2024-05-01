@@ -131,7 +131,7 @@ class UserPlants(APIView):
             water_frequency = 3
         else:
             water_frequency = 12
-        days_to_water = water_frequency - days
+        days_to_water = water_frequency + days
         if days_to_water < 0:
             days_to_water = 0
         return days_to_water
