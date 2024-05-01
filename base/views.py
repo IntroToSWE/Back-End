@@ -8,8 +8,7 @@ from . models import *
 from . serializers import *
 from django.db import connection
 from datetime import date
-from django.db.models.functions import ExtractDay
-from math import *
+from datetime import datetime
 
 
 class Loginview(APIView):
@@ -128,7 +127,7 @@ class UserPlants(APIView):
         current_date = date.today()
         day = last_watered_date - current_date
         days = day.days
-        if water_frequency == 'regularly':
+        if water_frequency == 'Regularly':
             water_frequency = 3
         else:
             water_frequency = 12
@@ -194,6 +193,12 @@ class UpdateUserPlants(APIView):
                 return Response("Plant Updated", status=200)
             else:
                 return Response("Plant Not Found")
+        elif "watered" in jsonData:
+            plant = personalPlant.objects.filter(user_id=userID, plantID_id=plantID, alive=alive)
+            today = datetime.now()
+            today_string = str(today.year) + "-" + str(today.month) + "-" + str(today.day)
+            personalPlant.objects.filter(user_id=userID, plantID_id=plantID, alive=alive).update(last_water=today_string)
+            return Response("Plant Updated", status=200)
 
 
 #class UpdatePlantView(APIView):
