@@ -58,7 +58,12 @@ class PlantLibraryView(APIView):
         # return HTTPResponse(jsonOutput, content_type="text/json-comment-filtered") # might use this instead ???
     
     def post(self, request):
-        return Response()
+        print(request.data)
+        output = libraryPlant.objects.filter(name__contains=request.data['search'])
+        jsonOutput = djangoSerializer.serialize('json', output)
+        jsonOutput = json.loads(jsonOutput)
+        print(jsonOutput)
+        return Response(jsonOutput)
 
 class CreatePlantView(APIView):
     def get(self, request):
