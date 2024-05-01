@@ -7,6 +7,9 @@ from django.http import HttpResponse
 from . models import *
 from . serializers import *
 from django.db import connection
+from datetime import date
+from django.db.models.functions import ExtractDay
+from math import *
 
 
 class Loginview(APIView):
@@ -121,6 +124,19 @@ class UserPlants(APIView):
     def get(self, request):
         return Response("no GET method logic, but working fine", status=200)
     
+    def days(self, last_watered_date, water_frequency):
+        current_date = date.today()
+        day = last_watered_date - current_date
+        days = day.days
+        if water_frequency == 'regularly':
+            water_frequency = 3
+        else:
+            water_frequency = 12
+        days_to_water = water_frequency - days
+        if days_to_water < 0:
+            days_to_water = 0
+        return days_to_water
+    
     def post(self, request):
         jsonData = request.data
         userID = jsonData["userID"]
@@ -130,6 +146,7 @@ class UserPlants(APIView):
         for plant in userPlants:
             # userPlantsList.append(libraryPlant.objects.get(id=plant.plantID))
             if plant.plantID:
+                days_to_watered = self.days(plant.last_water, plant.plantID.water)
                 jsonData[num] = {"plantID": plant.plantID.id,
                                  "name": plant.plantID.name,
                                  "size": plant.plantID.size,
@@ -139,7 +156,8 @@ class UserPlants(APIView):
                                  "sun": plant.plantID.sun,
                                  "fertilization": plant.plantID.fertilization,
                                  "soil": plant.plantID.soil,
-                                 "pet": plant.plantID.pet
+                                 "pet": plant.plantID.pet,
+                                 "days_to_watered": days_to_watered
                                  }
                 num += 1
         return Response(jsonData, status=200)

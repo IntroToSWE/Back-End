@@ -10,6 +10,7 @@ class personalPlant(models.Model):
     user = models.ForeignKey("Users", on_delete=models.CASCADE, null=True, blank=True) 
     plantID = models.ForeignKey("libraryPlant", on_delete=models.CASCADE, null=True) # we can use this ID to reference the plant info in sep. table
     alive = models.BooleanField(default=False, null=True)
+    last_water = models.DateField(auto_now = True)
     # name = models.CharField(max_length=200)
     # size = models.CharField(max_length=50)
     # description = models.TextField(null=True, blank=True)
