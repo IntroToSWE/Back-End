@@ -176,14 +176,14 @@ class UpdateUserPlants(APIView):
         print(f"\n\n\n{jsonData}\n\n\n")
         userID = jsonData["userID"]
         plantID = jsonData["plantID"]
-        alive = jsonData["alive"] # should be an interger (1 = alive, 0 = not alive)
+        alive = jsonData["alive"] # should be an integer (1 = alive, 0 = not alive)
         if "delete" in jsonData:
             query = f"""DELETE FROM base_personalplant WHERE rowid = (SELECT rowid FROM base_personalplant WHERE user_id={userID} AND plantID_id={plantID} AND alive={alive} LIMIT 1);"""
 
             with connection.cursor() as cursor:
                 cursor.execute(query)
 
-                return Response("User Deleted", status=200)
+                return Response("Plant Deleted", status=200)
         elif "update" in jsonData:
             plant = personalPlant.objects.filter(user_id=userID, plantID_id=plantID, alive=alive)
 
